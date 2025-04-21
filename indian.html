@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe App Clone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header, nav, footer {
+      background-color: #ff7043;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 0.5rem;
+      width: 250px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 180px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .wishlist {
+      position: absolute;
+      top: px;
+      right: 10px;
+      font-size: 25px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .wishlist::before {
+      content: '♡';
+      color: white;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+      transition: color 0.3s ease, content 0.3s ease;
+    }
+
+    .wishlist:hover::before {
+      content: '♥';
+      color: red;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin: 0.2rem 0;
+    }
+
+    footer {
+      margin-top: 2rem;
+      background-color: #ff7043;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .menu-icon {
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 10px 15px;
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 100px;
+      background-color: #ffffff;
+      padding: 10px;
+    }
+
+    #menu-toggle:checked ~ .menu {
+      display: block;
+    }
+
+    .menu a {
+      display: block;
+      padding: 8px;
+      text-decoration: none;
+      color: hsl(0, 91%, 71%);
+    }
+
+    .menu a:hover {
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Indian Recipe</h1>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰ Menu</label>
+    <div class="menu">
+      <a href="home.html">Home</a>
+      <a href="indian.html">Indian</a>
+      <a href="Mexican.html">Mexican</a>
+      <a href="chinese.html">Chinese</a>
+      <a href="italian.html">Italian</a>
+      <a href="dessert.html">Dessert</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <div class="image-container">
+        <img src="https://cdn.dotpe.in/longtail/store-items/1017561/5oP1Cbgw.jpeg" alt="Salad">
+        <span class="wishlist" title="Add to Wishlist"></span>
+      </div>
+      <h3>Salad</h3>
+      <p>Fresh garden veggies tossed in vinaigrette dressing.</p>
+      <p><strong>Price:</strong> ₹149</p>
+    </div>
+
+    <div class="card">
+      <div class="image-container">
+        <img src="https://static.wixstatic.com/media/91e241_475faa4fa56341f3878699dde5ab4904~mv2.jpg" alt="Biryani">
+        <span class="wishlist" title="Add to Wishlist"></span>
+      </div>
+      <h3>Biryani</h3>
+      <p>Spicy basmati rice with tender marinated chicken.</p>
+      <p><strong>Price:</strong> ₹299</p>
+    </div>
+
+    <div class="card">
+      <div class="image-container">
+      <img src="https://vismaifood.com/storage/app/uploads/public/8b4/19e/427/thumb__700_0_0_0_auto.jpg" alt="Masala Dosa"  width="200px" height="200px">
+      <span class="wishlist" title="Add to Wishlist"></span>   
+    </div>
+      <h3>Masala Dosa</h3>
+      <p>South Indian crispy dosa with spiced potato filling.</p>
+      <p><strong>Price:</strong> ₹149</p>
+      
+    </div>
+  </body>
+  </html>

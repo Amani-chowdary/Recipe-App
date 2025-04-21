@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe App </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+    header, nav, footer {
+      background-color: #ff7043;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      justify-content: center;
+    }
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 0.5rem;
+      flex: 1 0 21%;
+      box-sizing: border-box;
+      text-align: center;
+      overflow: hidden;
+      position: relative; 
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card p {
+      font-size: 0.9rem;
+      margin: 0.2rem 0;
+    }
+    footer {
+      margin-top: 2rem;
+    }
+    .wishlist {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .wishlist::before {
+      content: '♡'; 
+      color: #ccc;
+      transition: color 0.3s ease, content 0.3s ease;
+    }
+
+    .wishlist:hover::before {
+      content: '♥'; 
+      color: red;
+    }
+    
+    
+    #menu-toggle {
+      display: none;
+    }
+
+   
+    .menu-icon {
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 10px 15px;
+    
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+   
+    .menu {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 100px;
+      background-color: #ffffff;
+      padding: 10px;
+    }
+
+  
+    #menu-toggle:checked ~ .menu {
+      display: block;
+    }
+
+    .menu a {
+      display: block;
+      padding: 8px;
+      text-decoration: none;
+      color: hsl(0, 91%, 71%);
+    }
+
+    .menu a:hover {
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Recipe App</h1>
+   
+   <input type="checkbox" id="menu-toggle">
+
+  
+   <label for="menu-toggle" class="menu-icon">☰ Menu</label>
+   <div class="menu">
+     <a href="indian.html">Indian Recipe</a>
+     <a href="Mexican.html">Mexican Recipe</a>
+     <a href="chinese.html">Chinese Recipe</a>
+     <a href="italian.html">Italian Recipe</a>
+     <a href="dessert.html">Desserts</a>
+   </div>
+  </header>
+   
+ 
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="aboutt.html">About Us</a>
+    <a href="orders.html">My Orders</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+  <div class="container">
+    <div class="card">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/94/0a/7c/yaaayyyy.jpg?w=600&h=-1&s=1" alt="Pizza" width="200px" height="200px">
+      <h3>Pizza</h3>
+      <p>Classic Italian cheese pizza with fresh tomato sauce.</p>
+      <p><strong>Price:</strong> ₹299</p>
+      <span class="wishlist" title="Add to Wishlist"></span> 
+    </div>
+    <div class="card">
+      <img src="https://www.chicken.ca/wp-content/uploads/2020/09/Big-Juicy-Burgers.jpg" alt="Burger" width="200px" height="200px">
+      <h3>Burger</h3>
+      <p>Juicy beef burger with crispy lettuce and cheese.</p>
+      <p><strong>Price:</strong> ₹199</p>
+      <span class="wishlist" title="Add to Wishlist"></span> 
+    </div>
+    <div class="card">
+      <img src="https://s.lightorangebean.com/media/20240914160809/Spicy-Penne-Pasta_-done.png" alt="Pasta" width="200px" height="200px">
+      <h3>Pasta</h3>
+      <p>Delicious penne pasta in creamy Alfredo sauce.</p>
+      <p><strong>Price:</strong> ₹249</p>
+      <span class="wishlist" title="Add to Wishlist"></span> 
+    </div>
+    <div class="card">
+      <img src="https://cdn.dotpe.in/longtail/store-items/1017561/5oP1Cbgw.jpeg" alt="Salad" width="200px" height="200px">
+      <h3>Salad</h3>
+      <p>Fresh garden veggies tossed in vinaigrette dressing.</p>
+      <p><strong>Price:</strong> ₹149</p>
+      <span class="wishlist" title="Add to Wishlist"></span>
+    </div>
+    <div class="card">
+      <img src="https://www.eatingwell.com/thmb/S65kUcStJrjmnFi8IpBfKGIRIKg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chickpea-salad-sandwich-7923367-1x1-429d3a1000264d85ac7892aeac3d4c02.jpg" alt="Sandwich" width="200px" height="200px">
+      <h3>Sandwich</h3>
+      <p>Grilled sandwich with veggies and melted cheese.</p>
+      <p><strong>Price:</strong> ₹129</p>
+      <span class="wishlist" title="Add to Wishlist"></span>
+    </div>
+    <div class="card">
+      <img src="https://images.jdmagicbox.com/quickquotes/listicle/listicle_1696928641763_u06xl_4608x3072.jpg" alt="Sushi" width="200px" height="200px">
+      <h3>Sushi</h3>
+      <p>Assorted sushi rolls with soy sauce and wasabi.</p>
+      <p><strong>Price:</strong> ₹399</p>
+      <span class="wishlist" title="Add to Wishlist"></span> 
+    </div>
+    <div class="card">
+      <img src="https://static.wixstatic.com/media/91e241_475faa4fa56341f3878699dde5ab4904~mv2.jpg/v1/fill/w_666,h_444,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/91e241_475faa4fa56341f3878699dde5ab4904~mv2.jpg" alt="Biryani" width="200px" height="200px">
+      <h3>Biryani</h3>
+      <p>Spicy basmati rice with tender marinated chicken.</p>
+      <p><strong>Price:</strong> ₹299</p>
+      <span class="wishlist" title="Add to Wishlist"></span> 
+    </div>
+    <div class="card">
+      <img src="https://www.onceuponachef.com/images/2023/08/Beef-Tacos.jpg" alt="Tacos" width="200px" height="200px">
+      <h3>Tacos</h3>
+      <p>Crispy tacos filled with spicy beans and veggies.</p>
+      <p><strong>Price:</strong> ₹179</p>
+      <span class="wishlist" title="Add to Wishlist"></span> 
+    </div>
+
+    <div class="card">
+        <img src="https://vismaifood.com/storage/app/uploads/public/8b4/19e/427/thumb__700_0_0_0_auto.jpg" alt="Masala Dosa"  width="200px" height="200px">
+        <h3>Masala Dosa</h3>
+        <p>South Indian crispy dosa with spiced potato filling.</p>
+        <p><strong>Price:</strong> ₹149</p>
+        <span class="wishlist" title="Add to Wishlist"></span> 
+      </div>
+  
+ 
+        <div class="card">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/94/0a/7c/yaaayyyy.jpg?w=600&h=-1&s=1" alt="Pizza" width="200px" height="200px">
+          <h3>Pizza</h3>
+          <p>Classic Italian cheese pizza with fresh tomato sauce.</p>
+          <p><strong>Price:</strong> ₹299</p>
+          <span class="wishlist" title="Add to Wishlist"></span>
+        </div>
+      <div class="card">
+        <img src="https://static.toiimg.com/thumb/msid-112019658,width-1280,height-720,resizemode-4/112019658.jpg" alt="Ice Cream" width="200px" height="200px">
+        <h3>Ice Cream</h3>
+        <p>Chilled scoops of vanilla, chocolate, and strawberry.</p>
+        <p><strong>Price:</strong> ₹89</p>
+        <span class="wishlist" title="Add to Wishlist"></span> 
+      </div>
+      <div class="card">
+        <img src="https://eggs.ca/wp-content/uploads/2024/06/fluffy-pancakes-1664x832-1.jpg" alt="Pancakes" width="200px" height="200px">
+        <h3>Pancakes</h3>
+        <p>Fluffy pancakes topped with syrup and fruits.</p>
+        <p><strong>Price:</strong> ₹159</p>
+        <span class="wishlist" title="Add to Wishlist"></span> 
+      </div>
+    </div>
+    
+    <footer>
+      <p>&copy; 2025 Recipe App . All rights reserved.</p>
+    </footer>
+  </body>
+  </html>

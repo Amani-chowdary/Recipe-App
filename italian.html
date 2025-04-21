@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe App Clone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+    header, nav, footer {
+      background-color: #ff7043;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 180px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      justify-content: center;
+    }
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 0.5rem;
+      flex: 1 0 21%;
+      box-sizing: border-box;
+      text-align: center;
+      overflow: hidden;
+   
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card p {
+      font-size: 0.9rem;
+      margin: 0.2rem 0;
+    }
+    footer {
+      margin-top: 2rem;
+    }
+    #menu-toggle {
+      display: none;
+    }
+
+   
+    .menu-icon {
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 10px 15px;
+     
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+   
+    .menu {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 100px;
+      background-color: #ffffff;
+      padding: 10px;
+    }
+
+  
+    #menu-toggle:checked ~ .menu {
+      display: block;
+    }
+
+    .menu a {
+      display: block;
+      padding: 8px;
+      text-decoration: none;
+      color: hsl(0, 91%, 71%);
+    }
+
+    .menu a:hover {
+      background-color: #ffffff;
+    }
+    .wishlist {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 25px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .wishlist::before {
+      content: '♡';
+      color: white;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+      transition: color 0.3s ease, content 0.3s ease;
+    }
+
+    .wishlist:hover::before {
+      content: '♥';
+      color: red;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1> Italian Recipe </h1>
+    
+   <input type="checkbox" id="menu-toggle">
+
+  
+   <label for="menu-toggle" class="menu-icon">☰ Menu</label>
+   <div class="menu">
+    <a href="home.html">Home</a>
+     <a href="indian.html">Indian</a>
+     <a href="Mexican.html">Mexican</a>
+     <a href="chinese.html">Chinese</a>
+     <a href="italian.html">Italian</a>
+     <a href="dessert.html">Dessert</a>
+   </div>
+  </header>
+  
+  <div class="container">
+    <div class="card">
+      <div class="image-container">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/94/0a/7c/yaaayyyy.jpg?w=600&h=-1&s=1" alt="Pizza" width="200px" height="200px">
+      <span class="wishlist" title="Add to Wishlist"></span>
+    </div>
+      <h3>Pizza</h3>
+      <p>Classic Italian cheese pizza with fresh tomato sauce.</p>
+      <p><strong>Price:</strong> ₹299</p>
+      
+    </div>
+    <div class="card">
+      <div class="image-container">
+      <img src="https://www.chicken.ca/wp-content/uploads/2020/09/Big-Juicy-Burgers.jpg" alt="Burger"  width="200px" height="200px" >
+      <span class="wishlist" title="Add to Wishlist"></span>
+    </div>
+      <h3>Burger</h3>
+      <p>Juicy beef burger with crispy lettuce and cheese.</p>
+      <p><strong>Price:</strong> ₹199</p>
+     
+    </div>
+    <div class="card">
+      <div class="image-container">
+      <img src="https://s.lightorangebean.com/media/20240914160809/Spicy-Penne-Pasta_-done.png" alt="Pasta"  width="200px" height="200px">
+      <span class="wishlist" title="Add to Wishlist"></span>
+      </div>
+      <h3>Pasta</h3>
+      <p>Delicious penne pasta in creamy Alfredo sauce.</p>
+      <p><strong>Price:</strong> ₹249</p>
+     
+    </div>
+  </div>
+</body>
+</html>
